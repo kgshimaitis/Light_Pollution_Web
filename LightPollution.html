@@ -2,6 +2,7 @@
 
      <html amp lang="en">
        <head>
+         <link rel="sylesheet" type="text/css" href="LightPollution.css">
          <meta charset="utf-8">
          <script async src="https://cdn.ampproject.org/v0.js"></script>
          <title>Light Pollution in NYC</title>
@@ -18,11 +19,9 @@
              ]
            }
          </script>
-         <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-<style> * {box-sizing:border-box}
-body{font-family:"Lato", sans-serif;}
 
-.tab{
+<style>
+/* .tab{
   float:left;
   border: 1px solid#ccc;
   background-color:f1f1f1;
@@ -40,19 +39,70 @@ body{font-family:"Lato", sans-serif;}
     border-left: none;
     height: 300px;
   }
+  container {
+  display: inline-block;
+  cursor: pointer;
+} */
+
+/* .bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+} */
 </style>
        </head>
        <body>
+         <div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')">London</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+</div>
+
+<!-- Tab content -->
+<div id="London" class="tabcontent">
+  <h3>London</h3>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h3>Paris</h3>
+  <p>Paris is the capital of France.</p>
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+         <!-- <div class="container" onclick="myFunction(this)">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div> -->
+
          <h1>Light Pollution in NYC</h1>
-         <amp-img src="welcome.jpg" alt="Welcome" height="400" width="800"></amp-img>
+
 <!-- //tabs: -->
-         <div class="tabs">
-           <button class="tablinks" onclick="openTab(event,'What is light pollution?')">What is light pollution?</button>
-           <button class="tablinks" onclick="openTab(event,'Effects')">Effects</button>
-           <button class="tablinks" onclick="openTab(event,'Interactive Map')">Interactive Map</button>
-         </div>
+         <!-- <div class="tabs">
+           <button class="tablinks" onclick="openTab('What is light pollution?')">What is light pollution?</button>
+           <button class="tablinks" onclick="openTab('Effects')">Effects</button>
+           <button class="tablinks" onclick="openTab('Interactive Map')">Interactive Map</button>
+         </div> -->
 <!-- //tab content: -->
-<div id="What is light pollution?" class="tabcontent">
+<!-- <div id="What is light pollution?" class="tabcontent">
   <h3> What is light pollution?</h3>
   <p> Information</p>
 </div>
@@ -63,9 +113,30 @@ body{font-family:"Lato", sans-serif;}
 <div id="Interactive Map" class="tabcontent">
   <h3> Interactive Map</h3>
   <p> Information</p>
-</div>
+</div> -->
 
-<script> function openTab(evt,tabNAme){
+<script>
+function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+ <!-- <script> function openTab(evt,tabName){
   var i, tabcontent, tablinks;
   tabcontent=
   document.getElementsByClassName("tab content");
@@ -76,16 +147,11 @@ body{font-family:"Lato", sans-serif;}
   for (i=0; i<tablinks.length; i++){
     tablinks[i].className= tablinks[i].classname.replace("active","");
   }
-  document.getElementById(cityName).style.display= "block"
+  document.getElementById(tabName).style.display= "block"
   evt.currentTarget.className+="active";
 }
 document.getElementById("defaultOpen").click();
+
+function myFunction(x) {
+  x.classList.toggle("change"); -->
 </script>
-
-
-
-
-
-
-       </body>
-     </html>
