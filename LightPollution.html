@@ -1,157 +1,216 @@
 <!doctype html>
+<html amp lang="en">
+ <head>
 
-     <html amp lang="en">
-       <head>
-         <link rel="sylesheet" type="text/css" href="LightPollution.css">
-         <meta charset="utf-8">
-         <script async src="https://cdn.ampproject.org/v0.js"></script>
-         <title>Light Pollution in NYC</title>
-         <link rel="canonical" href="http://localhost/documentation/guides-and-tutorials/start/create/basic_markup">
-         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-         <script type="application/ld+json">
-           {
-             "@context": "http://schema.org",
-             "@type": "NewsArticle",
-             "headline": "Open-source framework for publishing content",
-             "datePublished": "2015-10-07T12:02:41Z",
-             "image": [
-               "logo.jpg"
-             ]
-           }
-         </script>
 
-<style>
-/* .tab{
-  float:left;
-  border: 1px solid#ccc;
-  background-color:f1f1f1;
-  width: 30%
-  height: 300px;
-  }
-  .tab button: hover{
-    background-color: #ccc;
-  }
-  .tabcontent{
-    float: left;
-    padding: 0px 12px;
-    border: 1 px solid #ccc;
-    width: 70%;
-    border-left: none;
-    height: 300px;
-  }
-  container {
-  display: inline-block;
+
+<meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>Light Pollution in NYC</title>
+    <link rel="canonical" href="http://localhost/documentation/guides-and-tutorials/start/create/basic_markup">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+<script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js">
+<script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js">
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Open-source framework for publishing content",
+        "datePublished": "2015-10-07T12:02:41Z",
+        "image": [
+          "logo.jpg"]
+      }
+
+
+
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+<style amp-custom>
+
+    .tab {
+      overflow: hidden;
+      border: 1px solid #ccc;
+      background-color: #f1f1f1;
+    }
+
+    .tab button {
+      background-color: #313d6d;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.2s;
+    }
+    .tab button:hover {
+      background-color: #313d6d;
+    }
+    .tab button.active {
+      background-color: #313d6d;
+    }
+
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
   cursor: pointer;
-} */
-
-/* .bar1, .bar2, .bar3 {
-  width: 35px;
-  height: 5px;
-  background-color: #333;
-  margin: 6px 0;
-  transition: 0.4s;
+  padding: 16px 16px;
+  font-size: 18px;
+  width: 20%;
+  font-family: Palatino
 }
 
-.change .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-  transform: rotate(-45deg) translate(-9px, 6px);
+.tablink:hover {
+  background-color: #black;
+}
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
 }
 
-.change .bar2 {opacity: 0;}
+h1{
+  font-family: Palatino
+}
 
-.change .bar3 {
-  -webkit-transform: rotate(45deg) translate(-8px, -8px);
-  transform: rotate(45deg) translate(-8px, -8px);
-} */
+h3 {
+	 position: relative;
+   font-size: 25px;
+	top: -100px;
+	left: 0px;
+  font-family: Palatino
+}
+
+p{
+  position: relative;
+  font-size: 18px;
+  top: -105px;
+  left: 0px;
+  font-family: Palatino
+}
+
+#Homepage {background-color: #313d6d;}
+#What{background-color: #313d6d;}
+#Effects {background-color: #313d6d;}
+#Map {background-color: #313d6d;}
+#Help {background-color: #313d6d;}
+
+
+
+
+.sidenav {
+  float: left;
+  position: relative;
+  right: 20px;
+  top:-100px;
+  height: 160px;
+  width: 130px;
+  z-index: 1;
+  background-color:black;
+  overflow-x: hidden;
+  padding-top: 10px;
+
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block;
+  font-family: Palatino
+}
+.sidenav a:hover {
+  color: ##313d6d;
+}
+.main {
+  margin-left: 10px;
+  padding: 10px 10px;
+}
+
+
+
+
 </style>
-       </head>
-       <body>
-         <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London')">London</button>
-  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+  </head>
+  <body>
+
+    <h1>Light Pollution in NYCs</h1>
+
+
+    <div class="tab">
+  <button class="tablink" onclick="openTab('Homepage', this)"
+    id="defaultOpen">Homepage</button>
+  <button class="tablink" onclick="openTab('What', this)">What</button>
+  <button class="tablink" onclick="openTab('Effects', this)">Effects</button>
+  <button class="tablink" onclick="openTab('Map', this)">Map</button>
+  <button class="tablink" onclick="openTab('Help', this)">Help</button>
 </div>
 
-<!-- Tab content -->
-<div id="London" class="tabcontent">
-  <h3>London</h3>
-  <p>London is the capital city of England.</p>
+
+
+ <div id="Homepage" class="tabcontent">
+  <h3>Homepage</h3>
+  <p> <strong>Light Pollution in NYC </strong><br>
+   Website Purpose:
+</amp-img alt="comparison" src="compare.jpg"></amp-img>
+   </p>
 </div>
 
-<div id="Paris" class="tabcontent">
-  <h3>Paris</h3>
-  <p>Paris is the capital of France.</p>
+
+<div id="What" class="tabcontent">
+
+  <h3>What is light Pollution</h3>
+  <p>The inappropriate or excessive use of artificial light – known as light pollution – can have serious environmental consequences for humans, wildlife, and our climate.</p>
+<amp-img>
 </div>
 
-<div id="Tokyo" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
-</div>
-         <!-- <div class="container" onclick="myFunction(this)">
-  <div class="bar1"></div>
-  <div class="bar2"></div>
-  <div class="bar3"></div>
-</div> -->
 
-         <h1>Light Pollution in NYC</h1>
-
-<!-- //tabs: -->
-         <!-- <div class="tabs">
-           <button class="tablinks" onclick="openTab('What is light pollution?')">What is light pollution?</button>
-           <button class="tablinks" onclick="openTab('Effects')">Effects</button>
-           <button class="tablinks" onclick="openTab('Interactive Map')">Interactive Map</button>
-         </div> -->
-<!-- //tab content: -->
-<!-- <div id="What is light pollution?" class="tabcontent">
-  <h3> What is light pollution?</h3>
-  <p> Information</p>
-</div>
 <div id="Effects" class="tabcontent">
-  <h3>Effects of Light Pollution on our Health</h3>
-  <p> Information</p>
+
+  <h3>Effects</h3>
+  <p>hhhhhhadiidiuakh</p>
 </div>
-<div id="Interactive Map" class="tabcontent">
-  <h3> Interactive Map</h3>
-  <p> Information</p>
-</div> -->
+
+
+<div id="Map" class="tabcontent">
+
+  <h3>Map</h3>
+  <p>poaodniahisdj</p>
+</div>
+
+
+<div id="Help" class="tabcontent">
+
+  <h3>Help</h3>
+  <p>poaoosdkkakkdk</p>
+</div>
+
 
 <script>
-function openCity(evt, cityName) {
-  // Declare all variables
-  var i, tabcontent, tablinks;
 
-  // Get all elements with class="tabcontent" and hide them
+function openTab(section, element) {
+  var i, tabcontent, tablinks, evt;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
 
-  // Get all elements with class="tablinks" and remove the class "active"
-  tablinks = document.getElementsByClassName("tablinks");
+  tablinks = document.getElementsByClassName("tablink");
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
+     tablinks[i].style.backgroundColor = "";
   }
-
-  // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(cityName).style.display = "block";
+  document.getElementById(section).style.display = "block";
   evt.currentTarget.className += " active";
-}
- <!-- <script> function openTab(evt,tabName){
-  var i, tabcontent, tablinks;
-  tabcontent=
-  document.getElementsByClassName("tab content");
-  for(i=0; i<tabcontent.length; i++){
-    tabcontent[i].style.display="none";
-  }
-  tablinks= document.getElementsByClassName ("tab links");
-  for (i=0; i<tablinks.length; i++){
-    tablinks[i].className= tablinks[i].classname.replace("active","");
-  }
-  document.getElementById(tabName).style.display= "block"
-  evt.currentTarget.className+="active";
 }
 document.getElementById("defaultOpen").click();
 
-function myFunction(x) {
-  x.classList.toggle("change"); -->
+
 </script>
+  </body>
+</html>
