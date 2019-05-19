@@ -30,11 +30,11 @@
     .tab {
       overflow: hidden;
       border: 1px solid #ccc;
-      background-color: #f1f1f1;
+      background-color: #e2f3ff;
     }
 
     .tab button {
-      background-color: #313d6d;
+      background-color: #f4c542;
       float: left;
       border: none;
       outline: none;
@@ -46,7 +46,7 @@
       background-color: #313d6d;
     }
     .tab button.active {
-      background-color: #313d6d;
+      background-color: #e2f3ff;
     }
 
 
@@ -60,7 +60,7 @@
   padding: 16px 16px;
   font-size: 18px;
   width: 20%;
-  font-family: Palatino
+  font-family: Georgia, serif;
 }
 
 .tablink:hover {
@@ -74,7 +74,7 @@
 }
 
 h1{
-  font-family: Palatino
+  font-family: Georgia, serif;
 }
 
 h3 {
@@ -82,7 +82,7 @@ h3 {
    font-size: 25px;
 	top: -100px;
 	left: 0px;
-  font-family: Palatino
+  font-family: Georgia, serif;
 }
 
 p{
@@ -90,14 +90,14 @@ p{
   font-size: 18px;
   top: -105px;
   left: 0px;
-  font-family: Palatino
+  font-family: Georgia, serif;
 }
 
-#Homepage {background-color: #313d6d;}
-#What{background-color: #313d6d;}
-#Effects {background-color: #313d6d;}
-#Map {background-color: #313d6d;}
-#Help {background-color: #313d6d;}
+#Home{background-color:#0e0d44;}
+#What{background-color:#0e0d44;}
+#Effects {background-color: #0e0d44;}
+#Map {background-color:#0e0d44 ;}
+#Help {background-color: #0e0d44;}
 
 
 
@@ -122,10 +122,10 @@ p{
   font-size: 18px;
   color: black;
   display: block;
-  font-family: Palatino
+  font-family: Georgia, serif;
 }
 .sidenav a:hover {
-  color: ##313d6d;
+  color: #313d6d;
 }
 .main {
   margin-left: 10px;
@@ -139,12 +139,12 @@ p{
   </head>
   <body>
 
-    <h1>Light Pollution in NYCs</h1>
+    <h1>Light Pollution in NYC</h1>
 
 
     <div class="tab">
-  <button class="tablink" onclick="openTab('Homepage', this)"
-    id="defaultOpen">Homepage</button>
+  <button class="tablink" onclick="openTab('Home', this)"
+    id="defaultOpen">Home</button>
   <button class="tablink" onclick="openTab('What', this)">What</button>
   <button class="tablink" onclick="openTab('Effects', this)">Effects</button>
   <button class="tablink" onclick="openTab('Map', this)">Map</button>
@@ -153,10 +153,10 @@ p{
 
 
 
- <div id="Homepage" class="tabcontent">
-  <h3>Homepage</h3>
+ <div id="Home" class="tabcontent">
+  <h3>Home</h3>
   <p> <strong>Light Pollution in NYC </strong><br>
-   Website Purpose:
+   This website is a resource to learn about Light Pollution, how it affects our daily lives in New York City, and what we can do to help.
 </amp-img alt="comparison" src="compare.jpg"></amp-img>
    </p>
 </div>
@@ -164,8 +164,53 @@ p{
 
 <div id="What" class="tabcontent">
 
-  <h3>What is light Pollution</h3>
-  <p>The inappropriate or excessive use of artificial light – known as light pollution – can have serious environmental consequences for humans, wildlife, and our climate.</p>
+  <h3>What is Light Pollution?</h3>
+  <p>There are countless environmental crises occuring in the world, most of them occuring because of human pollution. Most people have heard about or witnessed major types of pollution such as water pollution in oceans and lakes, or air pollution in major cities, but many people are unaware that light can also be polluted.
+<br></br>
+    Light Pollution is the inappropriate or excessive use of artificial light that can have serious environmental consequences for humans, wildlife, and our climate.</p>
+    <amp-carousel id="carousel-with-preview"
+    width="450"
+    height="300"
+    layout="responsive"
+    type="slides">
+    <amp-img src="bortle1.jpg"
+      width="450"
+      height="300"
+      layout="responsive"
+      alt="apples"></amp-img>
+    <amp-img src="bortle2.jpg"
+      width="450"
+      height="300"
+      layout="responsive"
+      alt="lemons"></amp-img>
+    <amp-img src="bortle3.jpg"
+      width="450"
+      height="300"
+      layout="responsive"
+      alt="blueberries"></amp-img>
+  </amp-carousel>
+  <div class="carousel-preview">
+    <button on="tap:carousel-with-preview.goToSlide(index=0)">
+      <amp-img src="bortle1.jpg"
+        width="60"
+        height="40"
+        alt="apples"></amp-img>
+    </button>
+    <button on="tap:carousel-with-preview.goToSlide(index=1)">
+      <amp-img src="bortle2.jpg"
+        width="60"
+        height="40"
+        alt="lemons"></amp-img>
+    </button>
+    <button on="tap:carousel-with-preview.goToSlide(index=2)">
+      <amp-img src="bortle3.jpg"
+        width="60"
+        height="40"
+        alt="blueberries"></amp-img>
+    </button>
+  </div>
+
+
 <amp-img>
 </div>
 
@@ -181,6 +226,8 @@ p{
 
   <h3>Map</h3>
   <p>poaodniahisdj</p>
+  <iframe src="https://www.lightpollutionmap.info/#zoom=10&lat=4970329&lon=-8238437&layers=B0FFFFFTFFFF" width="1200" height="750"></iframe>
+
 </div>
 
 
