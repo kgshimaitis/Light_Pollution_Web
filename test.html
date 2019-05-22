@@ -10,9 +10,6 @@
     <link rel="canonical" href="http://localhost/documentation/guides-and-tutorials/start/create/basic_markup">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <script type="application/ld+json">
-    <script custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js" async=""></script>
-    <script async="" src="https://cdn.ampproject.org/v0.js"></script>
-
 <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js">
 <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js">
       {
@@ -23,40 +20,33 @@
         "image": [
           "logo.jpg"]
       }
-
-
-
     </script>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <script custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js" async=""></script>
-
-
+<style amp-custom>
     .tab {
       overflow: hidden;
       border: 1px solid #ccc;
       background-color: #e2f3ff;
     }
-
     .tab button {
       background-color: #f4c542;
-      float: center;
+      float: left;
       border: none;
       outline: none;
-      cursor: star;
+      cursor: pointer;
       padding: 14px 16px;
       transition: 0.2s;
     }
     .tab button:hover {
       background-color: #313d6d;
+    }
     .tab button.active {
       background-color: #e2f3ff;
     }
-
-
 .tablink {
   background-color: #555;
   color: white;
-  float: center;
+  float: left;
   border: none;
   outline: none;
   cursor: pointer;
@@ -65,7 +55,6 @@
   width: 20%;
   font-family: Georgia, serif;
 }
-
 .tablink:hover {
   background-color: #black;
 }
@@ -75,19 +64,16 @@
   padding: 100px 20px;
   height: 100%;
 }
-
 h1{
   font-family: Georgia, serif;
 }
-
-h2 {
+h3 {
 	 position: relative;
    font-size: 25px;
 	top: -100px;
 	left: 0px;
   font-family: Georgia, serif;
 }
-
 p{
   position: relative;
   font-size: 18px;
@@ -96,32 +82,37 @@ p{
   font-family: Georgia, serif;
 }
 
-
 #What{background-color:#0e0d44;}
 #Effects {background-color: #0e0d44;}
 #Map {background-color:#0e0d44 ;}
 #Help {background-color: #0e0d44;}
 #Gallery{background-color: #0e0d44;}
-
-
-
-
-
-
-
-
+.sidenav {
+  float: left;
+  position: relative;
+  right: 20px;
+  top:-100px;
+  height: 160px;
+  width: 130px;
+  z-index: 1;
+  background-color:black;
+  overflow-x: hidden;
+  padding-top: 10px;
+}
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block;
+  font-family: Georgia, serif;
+}
+.sidenav a:hover {
+  color: #313d6d;
+}
 .main {
   margin-left: 10px;
   padding: 10px 10px;
-}
-
-
-
-
-</style>
-<style amp-custom>
-body{
-  background-color: backgroundColor: #0e0d44
 }
 </style>
   </head>
@@ -131,7 +122,7 @@ body{
 
 
     <div class="tab">
-  <button class="tablink" onclick="openTab('What', this)" id='defaultOpen'>What</button>
+  <button class="tablink" onclick="openTab('What', this)" id="defaultOpen">What</button>
   <button class="tablink" onclick="openTab('Effects', this)">Effects</button>
   <button class="tablink" onclick="openTab('Map', this)">Map</button>
   <button class="tablink" onclick="openTab('Help', this)">Help</button>
@@ -140,6 +131,13 @@ body{
 
 
 
+ <div id="Home" class="tabcontent">
+  <h3>Home</h3>
+  <p> <strong>Light Pollution in NYC </strong><br>
+   This website is a resource to learn about Light Pollution, how it affects our daily lives in New York City, and what we can do to help.
+</amp-img alt="comparison" src="compare.jpg"></amp-img>
+   </p>
+</div>
 
 
 <div id="What" class="tabcontent">
@@ -147,152 +145,93 @@ body{
   <h3>What is Light Pollution?</h3>
   <p>There are countless environmental crises occuring in the world, most of them occuring because of human pollution. Most people have heard about or witnessed major types of pollution such as water pollution in oceans and lakes, or air pollution in major cities, but many people are unaware that light can also be polluted.
 <br></br>
-    Light Pollution is the inappropriate or excessive use of artificial light that can have serious environmental consequences for humans, wildlife, and our climate. Not only doesn't it negatively affect our environment, but it also prevents us from seeing the breathtaking night sky.
-  <br></br> The following images display images of the night sky according to rank on the Bortle Scale. The bortle scale uses either number of colors to display the ranking of a night sky, a 1 on the Bortle Scale is the natural night sky, with no light pollution obstructing the view.
-</p>
-
+    Light Pollution is the inappropriate or excessive use of artificial light that can have serious environmental consequences for humans, wildlife, and our climate.</p>
     <amp-carousel id="carousel-with-preview"
-    width="600"
-    height="400"
+    width="450"
+    height="300"
     layout="responsive"
     type="slides">
-
-    <amp-img src="imagesLP/bortle2.png"
-      width="600"
-      height="400"
-      layout="responsive"
-      backgroundColor="#0e0d44"
-      alt="level1"></amp-img>
     <amp-img src="/Users/keeganshimaitis/Documents/GitHub/keeganwebsite/Light_Pollution_Web/imagesLP/bortle1.jpg"
-      width="600"
-      height="400"
+      width="450"
+      height="300"
       layout="responsive"
-      backgroundColor="#0e0d44"
-      alt="level2"></amp-img>
-    <amp-img src="bortle4.jpg"
-      width="600"
-      height="400"
+      </amp-img>
+    <amp-img src="/Users/keeganshimaitis/Documents/GitHub/keeganwebsite/Light_Pollution_Web/imagesLP/bortle2.png"
+      width="450"
+      height="300"
       layout="responsive"
-      backgroundColor="#0e0d44"
-      alt="level3"></amp-img>
-      <amp-img src="compare.jpg"
-        width="600"
-        height="400"
-        layout="responsive"
-        backgroundColor="#0e0d44"
-        alt="level3"></amp-img>
-        <amp-img src="5waycompare.png"
-          width="600"
-          height="400"
-          layout="responsive"
-          backgroundColor="#0e0d44"
-          alt="level3"></amp-img>
+      </amp-img>
+    <amp-img src="/Users/keeganshimaitis/Documents/GitHub/keeganwebsite/Light_Pollution_Web/imagesLP/bortle4.jpg"
+      width="450"
+      height="300"
+      layout="responsive"
+    </amp-img>
   </amp-carousel>
   <div class="carousel-preview">
     <button on="tap:carousel-with-preview.goToSlide(index=0)">
-      <amp-img src="bortle2.png"
-        width="220"
-        height="100"
-        backgroundColor="#0e0d44"
-        alt="level1"></amp-img>
+      <amp-img src="/Users/keeganshimaitis/Documents/GitHub/keeganwebsite/Light_Pollution_Web/imagesLP/bortle1.jpg"
+        width="60"
+        height="40"
+      </amp-img>
     </button>
     <button on="tap:carousel-with-preview.goToSlide(index=1)">
-      <amp-img src="bortle1.jpg"
-        width="220"
-        height="100"
-        backgroundColor="#0e0d44"
-        alt="level2"></amp-img>
+      <amp-img src="/Users/keeganshimaitis/Documents/GitHub/keeganwebsite/Light_Pollution_Web/imagesLP/bortle2.png"
+        width="60"
+        height="40"
+        </amp-img>
     </button>
     <button on="tap:carousel-with-preview.goToSlide(index=2)">
-      <amp-img src="bortle4.jpg"
-        width="220"
-        height="100"
-        backgroundColor="#0e0d44"
-        alt="level3"></amp-img>
-    </button>
-    <button on="tap:carousel-with-preview.goToSlide(index=2)">
-      <amp-img src="compare.jpg"
-        width="220"
-        height="100"
-        backgroundColor="#0e0d44"
-        alt="level3"></amp-img>
-        <button on="tap:carousel-with-preview.goToSlide(index=2)">
-          <amp-img src="5waycompare.png"
-            width="220"
-            height="100"
-            backgroundColor="#0e0d44"
-            alt="level3"></amp-img>
-        </button>
+      <amp-img src="/Users/keeganshimaitis/Documents/GitHub/keeganwebsite/Light_Pollution_Web/imagesLP/bortle4.jpg"
+        width="60"
+        height="40"
+        </amp-img>
     </button>
   </div>
 
 
+<amp-img>
 </div>
 
 
 <div id="Effects" class="tabcontent">
-  <h1>Effects</h1>
-  <h2>Impact on Ecosystems:</h2>
-</ul>
-    <li>Artificial lights can disrupt the sleeping patterns of nocturnal animals</li>
-      <li> Disrupts mating patterns of amphibians in wetland habitats and fireflies, who use the night for breeding rituals, and have seen significant population reduction </li>
-      <li> Artifical lights can draw baby sea turtles away from the ocean, who use the bright horizon to find the sea </li>
-      <li> Birds that migrate and hunt at night are distracted by artifical lights, because they usually use the moon and stars to navigate.
-        <li> Trees bloom too early</li>
-        </ul>
-<h2> Impact on Humans:</h2>
-<ul>
-  <li> Disrupt human sleeping patterns by supressing melatonin levels</li>
-    <li> Affecting circadian rhytmns, which studies have recently linked to obesity, depression, insomnia, diabetes, and breast cancer.</li>
-    <li> Blue light emitted from cell phones and LEDs, is the most harmful type of light that will keep you up at night </li>
-</p>
+
+  <h3>Effects</h3>
+  <p>hhhhhhadiidiuakh</p>
 </div>
 
 
 <div id="Map" class="tabcontent">
 
   <h3>Map</h3>
-  <p>This map depicts the current light pollution levels in world. Using the color coded bortle scale, you can explore the level of light pollution in New York, or anywhere else in the world. </p>
+  <p>poaodniahisdj</p>
   <iframe src="https://www.lightpollutionmap.info/#zoom=10&lat=4970329&lon=-8238437&layers=B0FFFFFTFFFF" width="1200" height="750"></iframe>
-<amp-img src="scale2.jpeg"> </amp-img>
+
 </div>
 
 
 <div id="Help" class="tabcontent">
 
-  <h1>How Can We Help?</h1></br></br> <br></br>
-  <p> There are many ways to help reduce light pollution including buying Internation Dark Sky Association approved lighting fixtures, using warm colored LEDs that don't emit harmful blue light, using dimmers and motion sensers, and simply turn off lights when they are not being used.</p>
-<amp-img src="ida.png"> </amp-img>
-</div>
-
-
-<div id="Gallery" class="tabcontent">
-
+  <h3>Help</h3>
+  <p>poaoosdkkakkdk</p>
 </div>
 
 
 <script>
-
 function openTab(section, element) {
   var i, tabcontent, tablinks, evt;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
-
   tablinks = document.getElementsByClassName("tablink");
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
      tablinks[i].style.backgroundColor = "";
   }
   document.getElementById(section).style.display = "block";
-  evt.currentTarget.className += " active";
+  // evt.currentTarget.className += " active";
 }
-
-
-// document.getElementById("defaultOpen").click();
-
-
+document.getElementById("defaultOpen").click();
 </script>
   </body>
 </html>
